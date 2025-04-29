@@ -28,13 +28,16 @@ def go(args):
     local_path = wandb.use_artifact(args.input_artifact).file()
     df = pd.read_csv(local_path)
 
-    logger.info(f"Load input artifact: {args.input_artifact} from WanDB")
+    logger.info(f"Load input artifact: {args.input_artifact} from WandB")
 
     idx = df['price'].between(args.min_price, args.max_price)
     logger.info(f"Selected price range between minimum {args.min_price} and maximum {args.max_price}")
     df = df[idx].copy()
     # Convert last_review to datetime
     df['last_review'] = pd.to_datetime(df['last_review'])
+    # Ensure longitude and latitude value ranges
+    idx = df['longitude'].between(-74.25, -73.50) & df['latitude'].between(40.5, 41.2)
+    df = df[idx].copy() 
 
 
     df.to_csv("clean_sample.csv", index=False)
