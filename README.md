@@ -1,3 +1,12 @@
+# Project Overview
+ This project follows the instructions of the 2nd Project for Udacity Machine Learning Engineering DevOps Nanodegree that teaches how to build reproducible model workflows.
+
+ I have created artifacts in Weights&Biases, generated a reproducible ML workflow in ML Flow and archived code changes in GitHub. Please refer to the following links for the whole scope of the project:
+ * GitHub: https://github.com/janacaba2/build-ml-pipeline-for-short-term-rental-prices
+ * Weights&Biases: https://wandb.ai/jana-backhus-other/nyc_airbnb?nw=nwuserjanabackhus
+
+ In the following, please find the initial project instructions from Udacity.
+
 # Build an ML Pipeline for Short-Term Rental Prices in NYC
 You are working for a property management company renting rooms and properties for short periods of 
 time on various rental platforms. You need to estimate the typical price for a given property based 
